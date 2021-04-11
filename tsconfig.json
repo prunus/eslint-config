@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [ "ESNext" ],
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "declaration": true
+  },
+  "include": [ "index.ts", ".eslintrc.json" ],
+  "exclude": [ "index.d.ts", "index.js" ]
+}
