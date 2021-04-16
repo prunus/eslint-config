@@ -1,0 +1,9 @@
+{
+  "extends": "../../eslint.config.json",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "node": true
+  }
+}

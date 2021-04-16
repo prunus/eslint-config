@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": "./react-native.json",
+  "rules": {
+    "react/prefer-stateless-function": [ "warn", {
+      "ignorePureComponents": false
+    } ]
+  }
+}

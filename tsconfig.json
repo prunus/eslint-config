@@ -7,8 +7,7 @@
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "declaration": true
-  },
-  "include": [ "index.ts", ".eslintrc.json" ],
-  "exclude": [ "index.d.ts", "index.js" ]
+    "declaration": true,
+    "strictNullChecks": true
+  }
 }

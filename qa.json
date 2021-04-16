@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": "plugin:sonarjs/recommended",
+  "plugins": [ "eslint-plugin-sonarjs" ]
+}

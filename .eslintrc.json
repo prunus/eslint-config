@@ -1,7 +1,0 @@
-{
-  "extends": "./eslint.json",
-  "ignorePatterns": [ "index.js", "index.d.ts" ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  }
-}
