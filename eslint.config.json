@@ -53,44 +53,7 @@
     "callback-return": [ "error", [ "callback" ] ],
 
     "camelcase": "off",
-    "@typescript-eslint/naming-convention": [ "error", {
-      "selector": [ "variable" ],
-      "modifiers": [ "global", "const" ],
-      "format": [ "camelCase" ],
-      "types": [ "function" ],
-      "leadingUnderscore": "forbid",
-      "trailingUnderscore": "forbid"
-    }, {
-      "selector": [ "variable" ],
-      "modifiers": [ "global", "const" ],
-      "format": [ "UPPER_CASE" ],
-      "leadingUnderscore": "forbid",
-      "trailingUnderscore": "forbid"
-    }, {
-      "selector": [ "accessor", "classProperty", "classMethod" ],
-      "modifiers": [ "private" ],
-      "format": [ "camelCase" ],
-      "leadingUnderscore": "require",
-      "trailingUnderscore": "forbid"
-    }, {
-      "selector": [ "variableLike", "property", "method", "parameterProperty" ],
-      "modifiers": [],
-      "format": [ "camelCase" ],
-      "leadingUnderscore": "forbid",
-      "trailingUnderscore": "forbid"
-    }, {
-      "selector": [ "enumMember", "typeLike" ],
-      "modifiers": [],
-      "format": [ "PascalCase" ],
-      "leadingUnderscore": "forbid",
-      "trailingUnderscore": "forbid"
-    }, {
-      "selector": [ "parameter", "variable" ],
-      "modifiers": [ "destructured" ],
-      "format": [ "camelCase", "PascalCase" ],
-      "leadingUnderscore": "forbid",
-      "trailingUnderscore": "forbid"
-    } ],
+    "@typescript-eslint/naming-convention": "off",
 
     "capitalized-comments": [ "warn", "always" ],
 
@@ -240,7 +203,7 @@
 
     "max-params": [ "warn", 4 ],
 
-    "max-statements": [ "warn", 10, { "ignoreTopLevelFunctions": true } ],
+    "max-statements": "off",
 
     "max-statements-per-line": [ "error", { "max": 1 } ],
 
@@ -248,7 +211,7 @@
 
     "multiline-ternary": [ "warn", "always-multiline" ],
 
-    "new-cap": [ "error" ],
+    "new-cap": "off",
 
     "new-parens": "off",
 
@@ -256,7 +219,7 @@
 
     "newline-before-return": [ "warn" ],
 
-    "newline-per-chained-call": [ "warn" ],
+    "newline-per-chained-call": "off",
 
     "no-alert": [ "warn" ],
 
@@ -482,12 +445,7 @@
     "no-sequences": [ "warn" ],
 
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": [ "error", {
-      "builtinGlobals": false,
-      "hoist": "all",
-      "ignoreTypeValueShadow": true,
-      "ignoreFunctionTypeParameterNameValueShadow": true
-    } ],
+    "@typescript-eslint/no-shadow": "off",
 
     "no-shadow-restricted-names": [ "error" ],
 
@@ -576,24 +534,14 @@
 
     "no-with": [ "error" ],
 
-    "nonblock-statement-body-position": [ "error", "beside", {
-      "overrides": {
-        "while": "below",
-        "do": "any"
-      }
-    } ],
+    "nonblock-statement-body-position": "off",
 
-    "object-curly-newline": [ "warn", {
-      "ObjectExpression": { "multiline": true, "minProperties": 3 },
-      "ObjectPattern": { "multiline": true },
-      "ImportDeclaration": { "multiline": true, "minProperties": 4 },
-      "ExportDeclaration": { "multiline": true, "minProperties": 4 }
-    } ],
+    "object-curly-newline": "off",
 
     "object-curly-spacing": "off",
     "@typescript-eslint/object-curly-spacing": [ "warn", "always" ],
 
-    "object-property-newline": [ "warn" ],
+    "object-property-newline": "off",
 
     "object-shorthand": [ "warn", "always" ],
 
@@ -766,7 +714,7 @@
     "@typescript-eslint/consistent-type-definitions": [ "warn", "interface" ],
 
     "@typescript-eslint/consistent-type-imports": [ "error", {
-      "prefer": "type-imports"
+      "prefer": "no-type-imports"
     } ],
 
     "@typescript-eslint/explicit-member-accessibility": "off",
@@ -784,11 +732,13 @@
 
     "@typescript-eslint/no-confusing-non-null-assertion": [ "warn" ],
 
-    "@typescript-eslint/no-confusing-void-expression": [ "warn" ],
+    "@typescript-eslint/no-confusing-void-expression": "off",
 
     "@typescript-eslint/no-dynamic-delete": [ "error" ],
 
-    "@typescript-eslint/no-empty-interface": [ "warn" ],
+    "@typescript-eslint/no-empty-interface": [ "warn", {
+      "allowSingleExtends": true
+    } ],
 
     "@typescript-eslint/no-explicit-any": [ "warn", {
       "ignoreRestArgs": false,
@@ -797,7 +747,7 @@
 
     "@typescript-eslint/no-extra-non-null-assertion": [ "warn" ],
 
-    "@typescript-eslint/no-extraneous-class": [ "warn" ],
+    "@typescript-eslint/no-extraneous-class": "off",
 
     "@typescript-eslint/no-floating-promises": [ "warn", {
       "ignoreIIFE": true,
@@ -819,10 +769,7 @@
       "checksVoidReturn": true
     } ],
 
-    "@typescript-eslint/no-namespace": [ "warn", {
-      "allowDeclarations": false,
-      "allowDefinitionFiles": true
-    } ],
+    "@typescript-eslint/no-namespace": "off",
 
     "@typescript-eslint/no-non-null-asserted-optional-chain": [ "warn" ],
 
@@ -838,7 +785,7 @@
     } ],
 
     "@typescript-eslint/no-type-alias": [ "warn", {
-      "allowAliases": "in-unions-and-intersections",
+      "allowAliases": "always",
       "allowCallbacks": "always",
       "allowConditionalTypes": "always",
       "allowConstructors": "always",
@@ -868,11 +815,11 @@
 
     "@typescript-eslint/no-unsafe-call": [ "error" ],
 
-    "@typescript-eslint/no-unsafe-member-access": [ "error" ],
+    "@typescript-eslint/no-unsafe-member-access": "off",
 
-    "@typescript-eslint/no-unsafe-return": [ "error" ],
+    "@typescript-eslint/no-unsafe-return": "off",
 
-    "@typescript-eslint/no-var-requires": [ "error" ],
+    "@typescript-eslint/no-var-requires": "off",
 
     "@typescript-eslint/non-nullable-type-assertion-style": [ "warn" ],
 
@@ -925,7 +872,9 @@
 
     "@typescript-eslint/sort-type-union-intersection-members": "off",
 
-    "@typescript-eslint/strict-boolean-expressions": [ "warn" ],
+    "@typescript-eslint/strict-boolean-expressions": [ "warn", {
+      "allowAny": true
+    } ],
 
     "@typescript-eslint/switch-exhaustiveness-check": [ "warn" ],
 
@@ -980,60 +929,13 @@
             "properties": "explicit",
             "parameterProperties": "explicit"
           }
-        } ],
-
-        "@typescript-eslint/explicit-module-boundary-types": [ "warn", {
-          "allowArgumentsExplicitlyTypedAsAny": true,
-          "allowDirectConstAssertionInArrowFunctions": true,
-          "allowedNames": [],
-          "allowHigherOrderFunctions": true,
-          "allowTypedFunctionExpressions": true
         } ]
       }
     }, {
       "files": [ "*.tsx" ],
       "rules": {
         "@typescript-eslint/no-unnecessary-type-constraint": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-extra-parens": "off",
-        "@typescript-eslint/naming-convention": [ "error", {
-          "selector": [ "variable", "function" ],
-          "modifiers": [],
-          "format": [ "camelCase", "PascalCase" ],
-          "types": [ "function" ],
-          "leadingUnderscore": "forbid",
-          "trailingUnderscore": "forbid"
-        }, {
-          "selector": [ "variable" ],
-          "modifiers": [ "global", "const" ],
-          "format": [ "UPPER_CASE" ],
-          "leadingUnderscore": "forbid",
-          "trailingUnderscore": "forbid"
-        }, {
-          "selector": [ "accessor", "classProperty", "classMethod" ],
-          "modifiers": [ "private" ],
-          "format": [ "camelCase" ],
-          "leadingUnderscore": "require",
-          "trailingUnderscore": "forbid"
-        }, {
-          "selector": [ "variableLike", "property", "method", "parameterProperty" ],
-          "modifiers": [],
-          "format": [ "camelCase" ],
-          "leadingUnderscore": "forbid",
-          "trailingUnderscore": "forbid"
-        }, {
-          "selector": [ "enumMember", "typeLike" ],
-          "modifiers": [],
-          "format": [ "PascalCase" ],
-          "leadingUnderscore": "forbid",
-          "trailingUnderscore": "forbid"
-        }, {
-          "selector": [ "parameter", "variable" ],
-          "modifiers": [ "destructured" ],
-          "format": [ "camelCase", "PascalCase" ],
-          "leadingUnderscore": "forbid",
-          "trailingUnderscore": "forbid"
-        } ]
+        "@typescript-eslint/no-extra-parens": "off"
       }
     }
   ]
