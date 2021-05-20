@@ -50,7 +50,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-confusing-arrow}
    */
-  'no-confusing-arrow': [ 'warn', { allowParens: true } ],
+  'no-confusing-arrow': [ 'off', { allowParens: true } ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-const-assign}

@@ -91,7 +91,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/func-style}
    */
-  'func-style': [ 'warn', 'expression' ],
+  'func-style': [ 'off', 'expression' ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/function-call-argument-newline}
@@ -121,7 +121,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/implicit-arrow-linebreak}
    */
-  'implicit-arrow-linebreak': [ 'warn', 'beside' ],
+  'implicit-arrow-linebreak': [ 'off', 'beside' ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/indent}

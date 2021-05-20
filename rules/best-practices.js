@@ -31,7 +31,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/consistent-return}
    */
-  'consistent-return': [ 'warn', {
+  'consistent-return': [ 'off', {
     treatUndefinedAsUnspecified: true
   } ],
 

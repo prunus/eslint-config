@@ -105,7 +105,7 @@ const rules = {
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/}
    */
   'react/jsx-curly-brace-presence': [ 'warn', {
-    props: 'always',
+    props: 'never',
     children: 'never'
   } ],
 

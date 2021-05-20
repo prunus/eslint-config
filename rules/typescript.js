@@ -350,8 +350,8 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md}
    */
-  '@typescript-eslint/no-empty-interface': [ 'warn', {
-    allowSingleExtends: false
+  '@typescript-eslint/no-empty-interface': [ 'off', {
+    allowSingleExtends: true
   } ],
 
   /**
@@ -785,7 +785,11 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/space-before-function-paren}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md}
    */
-  ...override( 'space-before-function-paren', [ 'warn', 'never' ] ),
+  ...override( 'space-before-function-paren', [ 'warn', {
+    anonymous: 'always',
+    named: 'never',
+    asyncArrow: 'always',
+  } ] ),
 
   /**
    * @override stylistic:space-infix-ops
@@ -830,47 +834,63 @@ const rules = {
   '@typescript-eslint/unified-signatures': [ 'off' ],
 }
 
-const overrides = [ {
-  files: [ '*.js' ],
-  rules: {
-    '@typescript-eslint/restrict-template-expressions': [ 'off' ],
-    '@typescript-eslint/no-var-requires': [ 'off' ],
-    '@typescript-eslint/no-require-imports': [ 'off' ],
-    '@typescript-eslint/explicit-member-accessibility': [ 'off' ],
+const overrides = [
+  {
+    files: [ '*.ts', '*.tsx' ],
+    rules: {
+      'max-len': [ 'warn', {
+        code: 100,
+        tabWidth: 2,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true
+      } ],    
+    },
   },
-}, {
-  files: [ '*.jsx', '*.tsx' ],
-  rules: {
-    '@typescript-eslint/naming-convention': [
-      'warn',
-      {
-        format: [ 'camelCase' ],
-        selector: [ 'default' ],
-      },
-      {
-        format: [ 'camelCase', 'PascalCase' ],
-        selector: [ 'variable', 'function' ],
-        modifiers: [ 'const' ],
-        types: [ 'function' ]
-      },
-      {
-        format: [ 'camelCase', 'UPPER_CASE' ],
-        selector: [ 'variable', 'classProperty' ],
-        modifiers: [ 'const', 'global', 'static', 'readonly' ],
-        types: [ 'boolean', 'string', 'number' ],
-      },
-      {
-        format: [ 'camelCase' ],
-        selector: [ 'memberLike' ],
-        modifiers: [ 'private' ],
-        leadingUnderscore: 'require',
-      },
-      {
-        format: [ 'PascalCase' ],
-        selector: [ 'enumMember', 'typeLike' ]
-      } 
-    ],
+  {
+    files: [ '*.js' ],
+    rules: {
+      '@typescript-eslint/restrict-template-expressions': [ 'off' ],
+      '@typescript-eslint/no-var-requires': [ 'off' ],
+      '@typescript-eslint/no-require-imports': [ 'off' ],
+      '@typescript-eslint/explicit-member-accessibility': [ 'off' ],
+    },
   },
-} ]
+  {
+    files: [ '*.jsx', '*.tsx' ],
+    rules: {
+      '@typescript-eslint/naming-convention': [
+        'warn',
+        {
+          format: [ 'camelCase' ],
+          selector: [ 'default' ],
+        },
+        {
+          format: [ 'camelCase', 'PascalCase' ],
+          selector: [ 'variable', 'function' ],
+          modifiers: [ 'const' ],
+          types: [ 'function' ]
+        },
+        {
+          format: [ 'camelCase', 'UPPER_CASE' ],
+          selector: [ 'variable', 'classProperty' ],
+          modifiers: [ 'const', 'global', 'static', 'readonly' ],
+          types: [ 'boolean', 'string', 'number' ],
+        },
+        {
+          format: [ 'camelCase' ],
+          selector: [ 'memberLike' ],
+          modifiers: [ 'private' ],
+          leadingUnderscore: 'require',
+        },
+        {
+          format: [ 'PascalCase' ],
+          selector: [ 'enumMember', 'typeLike' ]
+        } 
+      ],
+    },
+  }
+]
 
 module.exports = { parser, parserOptions, plugins, rules, overrides }
