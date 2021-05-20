@@ -92,7 +92,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-extra-parens}
    */
-  'no-extra-parens': [ 'error', { ignoreJSX: 'all' } ],
+  'no-extra-parens': [ 'error', 'all', { ignoreJSX: 'all' } ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-extra-semi}
