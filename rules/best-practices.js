@@ -404,7 +404,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/prefer-named-capture-group}
    */
-  'prefer-named-capture-group': [ 'warn' ],
+  'prefer-named-capture-group': [ 'off' ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/prefer-promise-reject-errors}

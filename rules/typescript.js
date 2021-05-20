@@ -15,6 +15,11 @@ const parserOptions = {
   project: fs.existsSync( 'tsconfig.eslint.json' ) ? path.resolve( 'tsconfig.eslint.json' ) : path.resolve( 'tsconfig.json' )
 }
 
+const globals = {
+  NodeJS: 'readonly',
+  globalThis: 'readonly',
+}
+
 const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md}
@@ -487,7 +492,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/no-redeclare}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redeclare.md}
    */
-  ...override( 'no-redeclare', [ 'warn', {
+  ...override( 'no-redeclare', [ 'off', {
     ignoreDeclarationMerge: true,
     builtinGlobals: true
   } ] ),
@@ -837,6 +842,9 @@ const rules = {
 const overrides = [
   {
     files: [ '*.ts', '*.tsx' ],
+    globals: {
+      JSX: 'readonly'
+    },
     rules: {
       'max-len': [ 'warn', {
         code: 100,
@@ -893,4 +901,4 @@ const overrides = [
   }
 ]
 
-module.exports = { parser, parserOptions, plugins, rules, overrides }
+module.exports = { parser, parserOptions, plugins, globals, rules, overrides }
