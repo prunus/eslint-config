@@ -367,7 +367,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/no-extra-parens}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md}
    */
-  ...override( 'no-extra-parens', [ 'error' ] ),
+  ...override( 'no-extra-parens', [ 'error', { ignoreJSX: 'all' } ] ),
 
   /**
    * @override errors:no-extra-semi
