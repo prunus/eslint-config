@@ -271,7 +271,8 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md}
    */
-  '@typescript-eslint/naming-convention': [ 'warn',
+  '@typescript-eslint/naming-convention': [
+    'warn',
     {
       format: [ 'camelCase' ],
       selector: [ 'default' ],
@@ -291,7 +292,8 @@ const rules = {
     {
       format: [ 'PascalCase' ],
       selector: [ 'enumMember', 'typeLike' ]
-    } ],
+    } 
+  ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-array-constructor}
@@ -835,6 +837,39 @@ const overrides = [ {
     '@typescript-eslint/no-var-requires': [ 'off' ],
     '@typescript-eslint/no-require-imports': [ 'off' ],
     '@typescript-eslint/explicit-member-accessibility': [ 'off' ],
+  },
+}, {
+  files: [ '*.jsx', '*.tsx' ],
+  rules: {
+    '@typescript-eslint/naming-convention': [
+      'warn',
+      {
+        format: [ 'camelCase' ],
+        selector: [ 'default' ],
+      },
+      {
+        format: [ 'camelCase', 'PascalCase' ],
+        selector: [ 'variable', 'function' ],
+        modifiers: [ 'const' ],
+        types: [ 'function' ]
+      },
+      {
+        format: [ 'camelCase', 'UPPER_CASE' ],
+        selector: [ 'variable', 'classProperty' ],
+        modifiers: [ 'const', 'global', 'static', 'readonly' ],
+        types: [ 'boolean', 'string', 'number' ],
+      },
+      {
+        format: [ 'camelCase' ],
+        selector: [ 'memberLike' ],
+        modifiers: [ 'private' ],
+        leadingUnderscore: 'require',
+      },
+      {
+        format: [ 'PascalCase' ],
+        selector: [ 'enumMember', 'typeLike' ]
+      } 
+    ],
   },
 } ]
 
