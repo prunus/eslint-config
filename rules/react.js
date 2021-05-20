@@ -10,6 +10,12 @@ const parserOptions = {
   }
 }
 
+const settings = {
+  react: {
+    version: 'detect'
+  }
+}
+
 const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md}
@@ -533,4 +539,4 @@ const rules = {
   'react/void-dom-elements-no-children': [ 'warn' ],
 }
 
-module.exports = { plugins, env, parserOptions, rules }
+module.exports = { plugins, env, parserOptions, settings, rules }
