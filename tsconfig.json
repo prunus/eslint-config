@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2015",
+    "module": "CommonJS",
     "lib": [ "ESNext" ],
     "allowSyntheticDefaultImports": true,
-    "module": "CommonJS",
+    "strict": true,
     "moduleResolution": "Node",
     "esModuleInterop": true,
+    "allowJs": true,
     "resolveJsonModule": true,
-    "declaration": true,
-    "strictNullChecks": true
+    "noEmit": true
   }
 }
