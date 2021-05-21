@@ -277,27 +277,30 @@ const rules = {
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md}
    */
   '@typescript-eslint/naming-convention': [
-    'warn',
-    {
+    'warn', {
       format: [ 'camelCase' ],
       selector: [ 'default' ],
-    },
-    {
+    }, {
       format: [ 'camelCase', 'UPPER_CASE' ],
-      selector: [ 'variable', 'classProperty' ],
-      modifiers: [ 'const', 'global', 'static', 'readonly' ],
-      types: [ 'boolean', 'string', 'number' ],
-    },
-    {
+      selector: [ 'variable' ],
+      modifiers: [ 'const', 'global' ],
+    }, {
+      format: [ 'camelCase', 'UPPER_CASE' ],
+      selector: [ 'classProperty' ],
+      modifiers: [ 'static', 'readonly' ],
+    }, {
+      format: [ 'camelCase', 'UPPER_CASE' ],
+      selector: [ 'typeProperty' ],
+      modifiers: [ 'readonly' ]
+    }, {
       format: [ 'camelCase' ],
       selector: [ 'memberLike' ],
       modifiers: [ 'private' ],
       leadingUnderscore: 'require',
-    },
-    {
+    }, {
       format: [ 'PascalCase' ],
       selector: [ 'enumMember', 'typeLike' ]
-    } 
+    }
   ],
 
   /**
@@ -500,7 +503,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md}
    */
-  '@typescript-eslint/no-require-imports': [ 'error' ],
+  '@typescript-eslint/no-require-imports': [ 'off' ],
 
   /**
    * @override variables:no-shadow
@@ -632,7 +635,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md}
    */
-  '@typescript-eslint/no-var-requires': [ 'error' ],
+  '@typescript-eslint/no-var-requires': [ 'off' ],
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/non-nullable-type-assertion-style.md}
@@ -869,33 +872,35 @@ const overrides = [
     files: [ '*.jsx', '*.tsx' ],
     rules: {
       '@typescript-eslint/naming-convention': [
-        'warn',
-        {
+        'warn', {
           format: [ 'camelCase' ],
           selector: [ 'default' ],
-        },
-        {
+        }, {
           format: [ 'camelCase', 'PascalCase' ],
           selector: [ 'variable', 'function' ],
           modifiers: [ 'const' ],
-          types: [ 'function' ]
-        },
-        {
+          types: [ 'function' ],
+        }, {
           format: [ 'camelCase', 'UPPER_CASE' ],
-          selector: [ 'variable', 'classProperty' ],
-          modifiers: [ 'const', 'global', 'static', 'readonly' ],
-          types: [ 'boolean', 'string', 'number' ],
-        },
-        {
+          selector: [ 'variable' ],
+          modifiers: [ 'const', 'global' ],
+        }, {
+          format: [ 'camelCase', 'UPPER_CASE' ],
+          selector: [ 'classProperty' ],
+          modifiers: [ 'static', 'readonly' ],
+        }, {
+          format: [ 'camelCase', 'UPPER_CASE' ],
+          selector: [ 'typeProperty' ],
+          modifiers: [ 'readonly' ]
+        }, {
           format: [ 'camelCase' ],
           selector: [ 'memberLike' ],
           modifiers: [ 'private' ],
           leadingUnderscore: 'require',
-        },
-        {
+        }, {
           format: [ 'PascalCase' ],
           selector: [ 'enumMember', 'typeLike' ]
-        } 
+        }
       ],
     },
   }
