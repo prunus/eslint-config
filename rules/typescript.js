@@ -277,7 +277,7 @@ const rules = {
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md}
    */
   '@typescript-eslint/naming-convention': [
-    'warn', {
+    'off', {
       format: [ 'camelCase' ],
       selector: [ 'default' ],
     }, {
@@ -339,7 +339,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/no-duplicate-imports}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-duplicate-imports.md}
    */
-  ...override( 'no-duplicate-imports', [ 'warn', { includeExports: true } ] ),
+  ...override( 'no-duplicate-imports', [ 'warn', { includeExports: false } ] ),
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md}
@@ -428,7 +428,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-void-type.md}
    */
-  '@typescript-eslint/no-invalid-void-type': [ 'error', {
+  '@typescript-eslint/no-invalid-void-type': [ 'off', {
     allowInGenericTypeArguments: true,
     allowAsThisParameter: false
   } ],
@@ -483,7 +483,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md}
    */
-  '@typescript-eslint/no-non-null-assertion': [ 'error' ],
+  '@typescript-eslint/no-non-null-assertion': [ 'off' ],
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md}
@@ -856,7 +856,7 @@ const overrides = [
         ignoreStrings: true,
         ignoreTemplateLiterals: true,
         ignoreRegExpLiterals: true
-      } ],    
+      } ],
     },
   },
   {
@@ -872,7 +872,7 @@ const overrides = [
     files: [ '*.jsx', '*.tsx' ],
     rules: {
       '@typescript-eslint/naming-convention': [
-        'warn', {
+        'off', {
           format: [ 'camelCase' ],
           selector: [ 'default' ],
         }, {

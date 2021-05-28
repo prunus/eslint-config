@@ -51,7 +51,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-component-props.md}
    */
-  'react/forbid-component-props': [ 'warn' ],
+  'react/forbid-component-props': [ 'off' ],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md}
@@ -102,7 +102,7 @@ const rules = {
   'react/jsx-closing-tag-location': [ 'warn' ],
 
   /**
-   * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/}
+   * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence}
    */
   'react/jsx-curly-brace-presence': [ 'warn', {
     props: 'never',
@@ -110,11 +110,11 @@ const rules = {
   } ],
 
   /**
-   * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-brace-presence.md}
+   * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-newline.md}
    */
   'react/jsx-curly-newline': [ 'warn', {
-    multiline: 'require',
-    singleline: 'forbid'
+    multiline: 'consistent',
+    singleline: 'consistent'
   } ],
 
   /**
@@ -142,7 +142,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md}
    */
-  'react/jsx-first-prop-new-line': [ 'warn', 'multiline-multiprop' ],
+  'react/jsx-first-prop-new-line': [ 'warn', 'never' ],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md}
@@ -182,10 +182,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md}
    */
-  'react/jsx-max-props-per-line': [ 'warn', {
-    maximum: 2,
-    when: 'always'
-  } ],
+  'react/jsx-max-props-per-line': [ 'warn', { maximum: 5, when: 'always' } ],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md}
@@ -252,7 +249,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md}
    */
-  'react/jsx-one-expression-per-line': [ 'warn' ],
+  'react/jsx-one-expression-per-line': [ 'warn', { allow: 'literal' } ],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md}
@@ -386,7 +383,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md}
    */
-  'react/no-multi-comp': [ 'warn' ],
+  'react/no-multi-comp': [ 'warn', { ignoreStateless: true } ],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md}
