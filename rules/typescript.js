@@ -324,7 +324,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-confusing-void-expression.md}
    */
-  '@typescript-eslint/no-confusing-void-expression': [ 'warn', {
+  '@typescript-eslint/no-confusing-void-expression': [ 'off', {
     ignoreArrowShorthand: true,
     ignoreVoidOperator: true,
   } ],
