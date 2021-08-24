@@ -11,18 +11,5 @@
     "resolveJsonModule": true,
     "noEmit": true
   },
-  "exclude": [],
-  "include": [
-    ".eslintrc.js",
-    "rules/best-practices.js",
-    "rules/errors.js",
-    "rules/es6.js",
-    "rules/import-helpers-react.js",
-    "rules/import-helpers.js",
-    "rules/react-hooks.js",
-    "rules/react.js",
-    "rules/stylistic.js",
-    "rules/typescript.js",
-    "rules/variables.js",
-  ]
+  "exclude": []
 }
