@@ -536,4 +536,13 @@ const rules = {
   'react/void-dom-elements-no-children': [ 'warn' ],
 }
 
-module.exports = { plugins, env, parserOptions, settings, rules }
+const overrides = [
+  {
+    files: [ '*.ts', '*.tsx' ],
+    rules: {
+      'react/prop-types': [ 'off' ],
+    },
+  },
+]
+
+module.exports = { plugins, env, parserOptions, settings, rules, overrides }
