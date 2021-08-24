@@ -1,4 +1,4 @@
-const override = require("../tools/override")
+const override = require( '../tools/override' )
 
 const plugins = [
   'import-helpers'
