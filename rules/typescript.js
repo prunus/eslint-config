@@ -12,7 +12,9 @@ const parser = '@typescript-eslint/parser'
 const plugins = [ '@typescript-eslint' ]
 
 const parserOptions = {
-  project: fs.existsSync( 'tsconfig.eslint.json' ) ? path.resolve( 'tsconfig.eslint.json' ) : path.resolve( 'tsconfig.json' )
+  project: fs.existsSync( 'tsconfig.lint.json' )
+    ? path.resolve( 'tsconfig.lint.json' )
+    : path.resolve( 'tsconfig.json' )
 }
 
 const globals = {
