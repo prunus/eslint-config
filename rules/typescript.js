@@ -855,6 +855,7 @@ const overrides = [
     globals: {
       JSX: 'readonly'
     },
+    parserOptions,
     rules: {
       'max-len': [ 'warn', {
         code: 100,
@@ -868,6 +869,7 @@ const overrides = [
   },
   {
     files: [ '*.js' ],
+    parserOptions,
     rules: {
       '@typescript-eslint/restrict-template-expressions': [ 'off' ],
       '@typescript-eslint/no-var-requires': [ 'off' ],
@@ -877,6 +879,7 @@ const overrides = [
   },
   {
     files: [ '*.jsx', '*.tsx' ],
+    parserOptions,
     rules: {
       '@typescript-eslint/naming-convention': [
         'off', {
