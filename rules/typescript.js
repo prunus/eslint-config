@@ -614,7 +614,12 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/no-unused-vars}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md}
    */
-  ...override( 'no-unused-vars', [ 'warn' ] ),
+  ...override( 'no-unused-vars', [ 'warn', {
+    vars: 'all',
+    args: 'after-used',
+    ignoreRestSiblings: false,
+    varsIgnorePattern: '^_'
+  } ] ),
 
   /**
    * @override variables:no-use-before-define
