@@ -249,7 +249,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md}
    */
-  'react/jsx-one-expression-per-line': [ 'warn', { allow: 'literal' } ],
+  'react/jsx-one-expression-per-line': [ 'off', { allow: 'literal' } ],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md}
