@@ -396,7 +396,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md}
    */
-  '@typescript-eslint/no-floating-promises': [ 'error', { ignoreIIFE: true } ],
+  '@typescript-eslint/no-floating-promises': [ 'off', { ignoreIIFE: true } ],
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md}
