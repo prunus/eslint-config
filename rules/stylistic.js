@@ -6,8 +6,10 @@ const rules = {
 
   /**
    * @see {@link https://eslint.org/docs/rules/array-bracket-spacing}
+   *
+   * rule disabled for compatibility with eslint-plugin-prettier
    */
-  'array-bracket-spacing': [ 'warn', 'always' ],
+  'array-bracket-spacing': [ 'off', 'always' ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/array-element-newline}
@@ -125,6 +127,8 @@ const rules = {
 
   /**
    * @see {@link https://eslint.org/docs/rules/indent}
+   *
+   * rule disabled for compatibility with eslint-plugin-prettier
    */
   'indent': [ 'warn', 2 ],
 
@@ -385,8 +389,10 @@ const rules = {
 
   /**
    * @see {@link https://eslint.org/docs/rules/nonblock-statement-body-position}
+   *
+   * rule disabled for compatibility with eslint-plugin-prettier
    */
-  'object-curly-spacing': [ 'warn', 'always' ],
+  'object-curly-spacing': [ 'off', 'always' ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/object-property-newline}
@@ -489,8 +495,10 @@ const rules = {
 
   /**
    * @see {@link https://eslint.org/docs/rules/space-in-parens}
+   *
+   * rule disabled for compatibility with eslint-plugin-prettier
    */
-  'space-in-parens': [ 'warn', 'always' ],
+  'space-in-parens': [ 'off', 'always' ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/space-infix-ops}

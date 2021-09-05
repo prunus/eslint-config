@@ -164,8 +164,10 @@ const rules = {
    * @override stylistic:indent
    * @see {@link https://eslint.org/docs/rules/indent}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md}
+   *
+   * rule disabled for compatibility with eslint-plugin-prettier
    */
-  ...override( 'indent', [ 'warn', 2 ] ),
+  ...override( 'indent', [ 'off', 2 ] ),
 
   /**
    * @override variables:init-declarations
@@ -653,8 +655,10 @@ const rules = {
    * @override stylisctic:object-curly-spacing
    * @see {@link https://eslint.org/docs/rules/object-curly-spacing}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/object-curly-spacing.md}
+   *
+   * rule disabled for compatibility with eslint-plugin-prettier
    */
-  ...override( 'object-curly-spacing', [ 'warn', 'always' ] ),
+  ...override( 'object-curly-spacing', [ 'off', 'always' ] ),
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-as-const.md}

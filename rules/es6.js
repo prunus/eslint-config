@@ -182,8 +182,10 @@ const rules = {
 
   /**
    * @see {@link https://eslint.org/docs/rules/template-curly-spacing}
+   *
+   * rule disabled for compatibility with eslint-plugin-prettier
    */
-  'template-curly-spacing': [ 'warn', 'always' ],
+  'template-curly-spacing': [ 'off', 'always' ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/yield-star-spacing}
