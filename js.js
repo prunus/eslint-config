@@ -6,5 +6,6 @@ module.exports = {
     './rules/stylistic',
     './rules/variables',
     './rules/import-helpers',
+    './rules/prettier.js',
   ].map( require.resolve )
 }
