@@ -11,7 +11,7 @@ npx install-peerdeps --dev @prunus/eslint-config;
 or
 
 ```sh
-yarn add -D @prunus/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import-helpers eslint-plugin-react eslint-plugin-react-hooks typescript
+yarn add -D @prunus/eslint-config eslint typescript
 ```
 
 Add to your eslint config (.eslintrc, or eslintConfig field in package.json):
