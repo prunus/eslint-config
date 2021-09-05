@@ -18,7 +18,6 @@ const parserOptions = {
 }
 
 const globals = {
-  NodeJS: 'readonly',
   globalThis: 'readonly',
 }
 
@@ -303,42 +302,6 @@ const rules = {
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/method-signature-style.md}
    */
   '@typescript-eslint/method-signature-style': ['warn', 'method'],
-
-  /**
-   * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md}
-   */
-  '@typescript-eslint/naming-convention': [
-    'off',
-    {
-      format: ['camelCase'],
-      selector: ['default'],
-    },
-    {
-      format: ['camelCase', 'UPPER_CASE'],
-      selector: ['variable'],
-      modifiers: ['const', 'global'],
-    },
-    {
-      format: ['camelCase', 'UPPER_CASE'],
-      selector: ['classProperty'],
-      modifiers: ['static', 'readonly'],
-    },
-    {
-      format: ['camelCase', 'UPPER_CASE'],
-      selector: ['typeProperty'],
-      modifiers: ['readonly'],
-    },
-    {
-      format: ['camelCase'],
-      selector: ['memberLike'],
-      modifiers: ['private'],
-      leadingUnderscore: 'require',
-    },
-    {
-      format: ['PascalCase'],
-      selector: ['enumMember', 'typeLike'],
-    },
-  ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-array-constructor}
@@ -950,26 +913,6 @@ const rules = {
 
 const overrides = [
   {
-    files: ['*.ts', '*.tsx'],
-    globals: {
-      JSX: 'readonly',
-    },
-    parserOptions,
-    rules: {
-      'max-len': [
-        'warn',
-        {
-          code: 100,
-          tabWidth: 2,
-          ignoreUrls: true,
-          ignoreStrings: true,
-          ignoreTemplateLiterals: true,
-          ignoreRegExpLiterals: true,
-        },
-      ],
-    },
-  },
-  {
     files: ['*.js'],
     parserOptions,
     rules: {
@@ -977,50 +920,6 @@ const overrides = [
       '@typescript-eslint/no-var-requires': ['off'],
       '@typescript-eslint/no-require-imports': ['off'],
       '@typescript-eslint/explicit-member-accessibility': ['off'],
-    },
-  },
-  {
-    files: ['*.jsx', '*.tsx'],
-    parserOptions,
-    rules: {
-      '@typescript-eslint/naming-convention': [
-        'off',
-        {
-          format: ['camelCase'],
-          selector: ['default'],
-        },
-        {
-          format: ['camelCase', 'PascalCase'],
-          selector: ['variable', 'function'],
-          modifiers: ['const'],
-          types: ['function'],
-        },
-        {
-          format: ['camelCase', 'UPPER_CASE'],
-          selector: ['variable'],
-          modifiers: ['const', 'global'],
-        },
-        {
-          format: ['camelCase', 'UPPER_CASE'],
-          selector: ['classProperty'],
-          modifiers: ['static', 'readonly'],
-        },
-        {
-          format: ['camelCase', 'UPPER_CASE'],
-          selector: ['typeProperty'],
-          modifiers: ['readonly'],
-        },
-        {
-          format: ['camelCase'],
-          selector: ['memberLike'],
-          modifiers: ['private'],
-          leadingUnderscore: 'require',
-        },
-        {
-          format: ['PascalCase'],
-          selector: ['enumMember', 'typeLike'],
-        },
-      ],
     },
   },
 ]
