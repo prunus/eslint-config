@@ -1,7 +1,7 @@
-const plugins = [ 'eslint-plugin-prettier' ]
+const plugins = ['eslint-plugin-prettier']
 
 const rules = {
-  'prettier/prettier': 'error'
+  'prettier/prettier': 'error',
 }
 
-module.exports = { plugins, rules }
+module.exports = {plugins, rules}

@@ -7,5 +7,5 @@ module.exports = {
     './rules/variables',
     './rules/import-helpers',
     './rules/prettier.js',
-  ].map( require.resolve )
+  ].map(require.resolve),
 }

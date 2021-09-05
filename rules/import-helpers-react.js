@@ -1,13 +1,11 @@
-const override = require( '../tools/override' )
+const override = require('../tools/override')
 
-const plugins = [
-  'import-helpers'
-]
+const plugins = ['import-helpers']
 
 const parserOptions = {
   ecmaFeatures: {
-    jsx: true
-  }
+    jsx: true,
+  },
 }
 
 const rules = {
@@ -15,16 +13,24 @@ const rules = {
    * @override es6:sort-imports
    * @see {@link https://github.com/Tibfib/eslint-plugin-import-helpers/blob/master/docs/rules/order-imports.md}
    */
-  ...override( 'import-helpers', 'order-imports', [ 'warn', {
-    newlinesBetween: 'always',
-    groups: [
-      [ '/^@?react/', '/^@?[A-z-]+-react/' ],
-      'module',
-      '/^~/',
-      [ 'parent', 'sibling', 'index' ],
+  ...override(
+    'import-helpers',
+    'order-imports',
+    [
+      'warn',
+      {
+        newlinesBetween: 'always',
+        groups: [
+          ['/^@?react/', '/^@?[A-z-]+-react/'],
+          'module',
+          '/^~/',
+          ['parent', 'sibling', 'index'],
+        ],
+        alphabetize: {order: 'asc', ignoreCase: true},
+      },
     ],
-    alphabetize: { order: 'asc', ignoreCase: true },
-  } ], 'sort-imports' )
+    'sort-imports',
+  ),
 }
 
-module.exports = { plugins, parserOptions, rules }
+module.exports = {plugins, parserOptions, rules}

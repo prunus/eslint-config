@@ -1,8 +1,8 @@
-const override = ( pluginPrefix, ruleName, rule, eslintRuleName ) => ( {
-  [`${ pluginPrefix }/${ ruleName }`]: rule,
-  [eslintRuleName || ruleName]: [ 'off' ]
-} )
+const override = (pluginPrefix, ruleName, rule, eslintRuleName) => ({
+  [`${pluginPrefix}/${ruleName}`]: rule,
+  [eslintRuleName || ruleName]: ['off'],
+})
 
-override.to = pluginPrefix => override.bind( null, pluginPrefix )
+override.to = pluginPrefix => override.bind(null, pluginPrefix)
 
 module.exports = override

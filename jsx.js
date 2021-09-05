@@ -4,6 +4,6 @@ module.exports = {
     './rules/react',
     './rules/react-hooks',
     './rules/import-helpers-react',
-  ].map( require.resolve ),
-  parserOptions: { ecmaVersion: 12 }
+  ].map(require.resolve),
+  parserOptions: {ecmaVersion: 12},
 }
