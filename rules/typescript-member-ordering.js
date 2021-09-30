@@ -1,4 +1,4 @@
-module.exports = {
+const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md}
    */
@@ -76,3 +76,5 @@ module.exports = {
     },
   ]
 }
+
+module.exports = { rules }
