@@ -2,7 +2,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md}
    */
-   '@typescript-eslint/member-ordering': [
+  '@typescript-eslint/member-ordering': [
     'warn',
     {
       default: {
@@ -74,7 +74,7 @@ const rules = {
         order: 'as-written',
       },
     },
-  ]
+  ],
 }
 
 module.exports = { rules }

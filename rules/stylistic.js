@@ -24,7 +24,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/brace-style}
    */
-  'brace-style': ['warn', '1tbs', {allowSingleLine: true}],
+  'brace-style': ['warn', '1tbs', { allowSingleLine: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/camelcase}
@@ -53,7 +53,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/capitalized-comments}
    */
-  'comma-spacing': ['warn', {before: false, after: true}],
+  'comma-spacing': ['warn', { before: false, after: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/comma-style}
@@ -66,7 +66,7 @@ const rules = {
   'computed-property-spacing': [
     'warn',
     'never',
-    {enforceForClassMembers: true},
+    { enforceForClassMembers: true },
   ],
 
   /**
@@ -163,12 +163,12 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/keyword-spacing}
    */
-  'keyword-spacing': ['warn', {before: true, after: true}],
+  'keyword-spacing': ['warn', { before: true, after: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/line-comment-position}
    */
-  'line-comment-position': ['off', {position: 'above'}],
+  'line-comment-position': ['off', { position: 'above' }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/linebreak-style}
@@ -200,7 +200,7 @@ const rules = {
   'lines-between-class-members': [
     'warn',
     'always',
-    {exceptAfterSingleLine: false},
+    { exceptAfterSingleLine: false },
   ],
 
   /**
@@ -226,12 +226,12 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/max-lines}
    */
-  'max-lines': ['warn', {max: 300, skipComments: true}],
+  'max-lines': ['warn', { max: 300, skipComments: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/max-lines}
    */
-  'max-lines-per-function': ['warn', {max: 100, skipComments: true}],
+  'max-lines-per-function': ['warn', { max: 100, skipComments: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/max-nested-callbacks}
@@ -251,7 +251,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/max-statements}
    */
-  'max-statements-per-line': ['warn', {max: 2}],
+  'max-statements-per-line': ['warn', { max: 2 }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/multiline-comment-style}
@@ -266,7 +266,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/new-cap}
    */
-  'new-cap': ['warn', {newIsCap: true, capIsNew: false, properties: true}],
+  'new-cap': ['warn', { newIsCap: true, capIsNew: false, properties: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/new-parens}
@@ -276,7 +276,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/newline-per-chained-call}
    */
-  'newline-per-chained-call': ['warn', {ignoreChainWithDepth: 2}],
+  'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 2 }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-array-constructor}
@@ -347,7 +347,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-multiple-empty-lines}
    */
-  'no-multiple-empty-lines': ['warn', {max: 1, maxEOF: 1, maxBOF: 0}],
+  'no-multiple-empty-lines': ['warn', { max: 1, maxEOF: 1, maxBOF: 0 }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-negated-condition}
@@ -412,7 +412,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/nonblock-statement-body-position}
    */
-  'object-curly-newline': ['warn', {consistent: true}],
+  'object-curly-newline': ['warn', { consistent: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/nonblock-statement-body-position}
@@ -424,7 +424,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/object-property-newline}
    */
-  'object-property-newline': ['warn', {allowAllPropertiesOnSameLine: true}],
+  'object-property-newline': ['warn', { allowAllPropertiesOnSameLine: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/one-var}
@@ -456,21 +456,21 @@ const rules = {
    */
   'padding-line-between-statements': [
     'warn',
-    {blankLine: 'always', prev: ['const', 'let', 'var'], next: '*'},
+    { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
     {
       blankLine: 'any',
       prev: ['const', 'let', 'var'],
       next: ['const', 'let', 'var'],
     },
-    {blankLine: 'always', prev: 'directive', next: '*'},
-    {blankLine: 'any', prev: 'directive', next: 'directive'},
+    { blankLine: 'always', prev: 'directive', next: '*' },
+    { blankLine: 'any', prev: 'directive', next: 'directive' },
     {
       blankLine: 'always',
       prev: ['case', 'default'],
       next: ['case', 'default'],
     },
-    {blankLine: 'always', prev: ['throw', 'switch', 'import'], next: '*'},
-    {blankLine: 'any', prev: ['import'], next: ['import']},
+    { blankLine: 'always', prev: ['throw', 'switch', 'import'], next: '*' },
+    { blankLine: 'any', prev: ['import'], next: ['import'] },
   ],
 
   /**
@@ -491,17 +491,21 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/quote-props}
    */
-  quotes: ['warn', 'single', {avoidEscape: true, allowTemplateLiterals: true}],
+  quotes: [
+    'warn',
+    'single',
+    { avoidEscape: true, allowTemplateLiterals: true },
+  ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/quote-props}
    */
-  semi: ['warn', 'never', {beforeStatementContinuationChars: 'always'}],
+  semi: ['warn', 'never', { beforeStatementContinuationChars: 'always' }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/semi-spacing}
    */
-  'semi-spacing': ['off', {before: false, after: true}],
+  'semi-spacing': ['off', { before: false, after: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/semi-style}
@@ -538,7 +542,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/space-infix-ops}
    */
-  'space-infix-ops': ['warn', {int32Hint: false}],
+  'space-infix-ops': ['warn', { int32Hint: false }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/space-unary-ops}
@@ -571,4 +575,4 @@ const rules = {
   'wrap-regex': ['off'],
 }
 
-module.exports = {rules}
+module.exports = { rules }

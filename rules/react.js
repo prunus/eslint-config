@@ -45,7 +45,7 @@ const rules = {
    */
   'react/default-props-match-prop-types': [
     'error',
-    {allowRequiredDefaults: true},
+    { allowRequiredDefaults: true },
   ],
 
   /**
@@ -66,7 +66,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md}
    */
-  'react/forbid-dom-props': ['warn', {forbid: ['id']}],
+  'react/forbid-dom-props': ['warn', { forbid: ['id'] }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-elements.md}
@@ -145,7 +145,7 @@ const rules = {
       when: 'never',
       children: true,
       allowMultiline: false,
-      spacing: {objectLiterals: 'always'},
+      spacing: { objectLiterals: 'always' },
     },
   ],
 
@@ -209,17 +209,17 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md}
    */
-  'react/jsx-max-depth': ['off', {max: 3}],
+  'react/jsx-max-depth': ['off', { max: 3 }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md}
    */
-  'react/jsx-max-props-per-line': ['warn', {maximum: 5, when: 'always'}],
+  'react/jsx-max-props-per-line': ['warn', { maximum: 5, when: 'always' }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md}
    */
-  'react/jsx-newline': ['warn', {prevent: true}],
+  'react/jsx-newline': ['warn', { prevent: true }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md}
@@ -290,7 +290,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-one-expression-per-line.md}
    */
-  'react/jsx-one-expression-per-line': ['off', {allow: 'literal'}],
+  'react/jsx-one-expression-per-line': ['off', { allow: 'literal' }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md}
@@ -433,7 +433,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md}
    */
-  'react/no-multi-comp': ['warn', {ignoreStateless: true}],
+  'react/no-multi-comp': ['warn', { ignoreStateless: true }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md}
@@ -453,7 +453,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md}
    */
-  'react/no-string-refs': ['warn', {noTemplateLiterals: true}],
+  'react/no-string-refs': ['warn', { noTemplateLiterals: true }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-this-in-sfc.md}
@@ -478,7 +478,7 @@ const rules = {
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md}
    */
-  'react/no-unsafe': ['warn', {checkAliases: true}],
+  'react/no-unsafe': ['warn', { checkAliases: true }],
 
   /**
    * @see {@link https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md}
@@ -604,4 +604,4 @@ const overrides = [
   },
 ]
 
-module.exports = {plugins, env, parserOptions, settings, rules, overrides}
+module.exports = { plugins, env, parserOptions, settings, rules, overrides }

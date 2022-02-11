@@ -14,7 +14,13 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/array-callback-return}
    */
-  'array-callback-return': ['warn'],
+  'array-callback-return': [
+    'warn',
+    {
+      allowImplicit: false,
+      checkForEach: false,
+    },
+  ],
 
   /**
    * @see {@link https://eslint.org/docs/rules/block-scoped-var}
@@ -49,7 +55,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/default-case}
    */
-  'default-case': ['warn', {commentPattern: '^skip\\sdefault'}],
+  'default-case': ['warn', { commentPattern: '^skip\\sdefault' }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/default-case-last}
@@ -69,12 +75,12 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/dot-notation}
    */
-  'dot-notation': ['warn', {allowKeywords: true}],
+  'dot-notation': ['warn', { allowKeywords: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/eqeqeq}
    */
-  eqeqeq: ['warn', 'always', {null: 'ignore'}],
+  eqeqeq: ['warn', 'always', { null: 'ignore' }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/grouped-accessor-pairs}
@@ -119,7 +125,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-else-return}
    */
-  'no-else-return': ['warn', {allowElseIf: false}],
+  'no-else-return': ['warn', { allowElseIf: false }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-empty-function}
@@ -180,7 +186,7 @@ const rules = {
       boolean: false,
       number: true,
       string: true,
-      disallowTemplateShorthand: true,
+      disallowTemplateShorthand: false,
       allow: [],
     },
   ],
@@ -208,7 +214,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-labels}
    */
-  'no-labels': ['error', {allowLoop: false, allowSwitch: false}],
+  'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-lone-blocks}
@@ -226,7 +232,7 @@ const rules = {
   'no-magic-numbers': [
     'off',
     {
-      ignore: [],
+      ignore: [1], // Default is []
       ignoreArrayIndexes: true,
       enforceConst: true,
       detectObjects: false,
@@ -283,14 +289,10 @@ const rules = {
       ignorePropertyModificationsFor: [
         'acc', // For reduce accumulators
         'accumulator', // For reduce accumulators
-        'e', // For e.returnvalue
-        'ctx', // For Koa routing
-        'context', // For Koa routing
         'req', // For Express requests
         'request', // For Express requests
         'res', // For Express responses
         'response', // For Express responses
-        '$scope', // For Angular 1 scopes
         'staticContext', // For ReactRouter context
       ],
     },
@@ -304,7 +306,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-redeclare}
    */
-  'no-redeclare': ['error', {builtinGlobals: true}],
+  'no-redeclare': ['error', { builtinGlobals: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-restricted-properties}
@@ -367,9 +369,20 @@ const rules = {
   'no-return-assign': ['error', 'except-parens'],
 
   /**
+   * Using return await inside an async function keeps the current function
+   * in the call stack until the Promise that is being awaited has resolved,
+   * at the cost of an extra microtask before resolving the outer Promise.
+   * return await can also be used in a try/catch statement to catch errors
+   * from another function that returns a Promise.
+   *
+   * You can avoid the extra microtask by not awaiting the return value,
+   * with the trade off of the function no longer being a part of the stack
+   * trace if an error is thrown asynchronously from the Promise being returned.
+   * This can make debugging more difficult.
+   *
    * @see {@link https://eslint.org/docs/rules/no-return-await}
    */
-  'no-return-await': ['off'],
+  'no-return-await': ['warn'],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-script-url}
@@ -452,7 +465,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-warning-comments}
    */
-  'no-warning-comments': ['off'],
+  'no-warning-comments': ['warn'],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-with}
@@ -462,7 +475,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/prefer-named-capture-group}
    */
-  'prefer-named-capture-group': ['off'],
+  'prefer-named-capture-group': ['warn'],
 
   /**
    * @see {@link https://eslint.org/docs/rules/prefer-promise-reject-errors}
@@ -497,7 +510,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/wrap-iife}
    */
-  'wrap-iife': ['error', 'outside', {functionPrototypeMethods: false}],
+  'wrap-iife': ['error', 'inside', { functionPrototypeMethods: false }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/yoda}
@@ -505,4 +518,4 @@ const rules = {
   yoda: ['warn'],
 }
 
-module.exports = {rules}
+module.exports = { rules }

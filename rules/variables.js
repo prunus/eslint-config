@@ -57,4 +57,4 @@ const rules = {
   'no-use-before-define': ['error'],
 }
 
-module.exports = {rules}
+module.exports = { rules }

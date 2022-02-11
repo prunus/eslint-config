@@ -5,10 +5,6 @@ const env = {
 const parserOptions = {
   ecmaVersion: 6,
   sourceType: 'module',
-  ecmaFeatures: {
-    generators: true,
-    objectLiteralDuplicateProperties: false,
-  },
 }
 
 const rules = {
@@ -20,12 +16,12 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/arrow-parens}
    */
-  'arrow-parens': ['warn', 'as-needed', {requireForBlockBody: true}],
+  'arrow-parens': ['warn', 'as-needed', { requireForBlockBody: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/arrow-spacing}
    */
-  'arrow-spacing': ['warn', {before: true, after: true}],
+  'arrow-spacing': ['warn', { before: true, after: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/constructor-super}
@@ -41,7 +37,7 @@ const rules = {
       before: false,
       after: true,
       anonymous: 'neither',
-      method: {before: false, after: true},
+      method: { before: false, after: true },
     },
   ],
 
@@ -53,7 +49,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-confusing-arrow}
    */
-  'no-confusing-arrow': ['off', {allowParens: true}],
+  'no-confusing-arrow': ['off', { allowParens: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-const-assign}
@@ -68,7 +64,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-duplicate-imports}
    */
-  'no-duplicate-imports': ['warn', {includeExports: true}],
+  'no-duplicate-imports': ['warn', { includeExports: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-new-symbol}
@@ -98,7 +94,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-useless-computed-key}
    */
-  'no-useless-computed-key': ['warn', {enforceForClassMembers: true}],
+  'no-useless-computed-key': ['warn', { enforceForClassMembers: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-useless-constructor}
@@ -140,7 +136,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/prefer-const}
    */
-  'prefer-const': ['warn', {destructuring: 'any'}],
+  'prefer-const': ['warn', { destructuring: 'any' }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/prefer-destructuring}
@@ -209,4 +205,4 @@ const rules = {
   'yield-star-spacing': ['warn', 'after'],
 }
 
-module.exports = {env, parserOptions, rules}
+module.exports = { env, parserOptions, rules }

@@ -1,7 +1,4 @@
 module.exports = {
-  env: {node: true},
-  parserOptions: {
-    project: require.resolve('./tsconfig.json'),
-  },
-  extends: require.resolve('./tsx'),
+  env: { node: true },
+  extends: ['./tsx'].map(require.resolve),
 }

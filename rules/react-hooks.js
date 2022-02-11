@@ -14,4 +14,4 @@ const rules = {
   'react-hooks/exhaustive-deps': ['warn'],
 }
 
-module.exports = {plugins, parserOptions, rules}
+module.exports = { plugins, parserOptions, rules }

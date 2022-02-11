@@ -15,11 +15,11 @@ const rules = {
       {
         newlinesBetween: 'always',
         groups: ['module', '/^~/', ['parent', 'sibling', 'index']],
-        alphabetize: {order: 'asc', ignoreCase: true},
+        alphabetize: { order: 'asc', ignoreCase: true },
       },
     ],
     'sort-imports',
   ),
 }
 
-module.exports = {plugins, rules}
+module.exports = { plugins, rules }

@@ -77,21 +77,23 @@ const rules = {
   ],
 }
 
-const overrides = [ {
-  files: ['*.jsx', '*.tsx'],
-  rules: {
-    '@typescript-eslint/naming-convention': [
-      'error',
-      defaultCamelCase,
-      globalVariableUppercase,
-      privateClassMemberLeadingUnderscore,
-      readonlyStaticClassPropertyUppercase,
-      readonlyPrivateStaticClassPropertyUppercase,
-      readonlyTypePropertyUppercase,
-      enumMemberAndTypeLikePascalCase,
-      reactComponentPascalCase
-    ],
-  }
-} ]
+const overrides = [
+  {
+    files: ['*.jsx', '*.tsx'],
+    rules: {
+      '@typescript-eslint/naming-convention': [
+        'error',
+        defaultCamelCase,
+        globalVariableUppercase,
+        privateClassMemberLeadingUnderscore,
+        readonlyStaticClassPropertyUppercase,
+        readonlyPrivateStaticClassPropertyUppercase,
+        readonlyTypePropertyUppercase,
+        enumMemberAndTypeLikePascalCase,
+        reactComponentPascalCase,
+      ],
+    },
+  },
+]
 
-module.exports = {rules, overrides}
+module.exports = { rules, overrides }

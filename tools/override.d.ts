@@ -1,4 +1,4 @@
-import {Linter} from 'eslint'
+import { Linter } from 'eslint'
 
 declare function override<
   P extends string,

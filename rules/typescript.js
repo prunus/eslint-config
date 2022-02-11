@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const {to} = require('../tools/override')
+const { to } = require('../tools/override')
 
 const override = to('@typescript-eslint')
 
@@ -47,7 +47,7 @@ const rules = {
    */
   '@typescript-eslint/ban-ts-comment': [
     'warn',
-    {'ts-expect-error': 'allow-with-description'},
+    { 'ts-expect-error': 'allow-with-description' },
   ],
 
   /**
@@ -60,7 +60,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/brace-style}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md}
    */
-  ...override('brace-style', ['warn', '1tbs', {allowSingleLine: true}]),
+  ...override('brace-style', ['warn', '1tbs', { allowSingleLine: true }]),
 
   /**
    * @override stylistic:camelcase
@@ -87,7 +87,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/comma-spacing}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md}
    */
-  ...override('comma-spacing', ['warn', {before: false, after: true}]),
+  ...override('comma-spacing', ['warn', { before: false, after: true }]),
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-indexed-object-style.md}
@@ -198,7 +198,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/keyword-spacing}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/keyword-spacing.md}
    */
-  ...override('keyword-spacing', ['warn', {before: true, after: true}]),
+  ...override('keyword-spacing', ['warn', { before: true, after: true }]),
 
   /**
    * @override stylistic:lines-between-class-members
@@ -207,7 +207,7 @@ const rules = {
    */
   ...override('lines-between-class-members', [
     'warn',
-    {exceptAfterSingleLine: false, exceptAfterOverload: true},
+    { exceptAfterSingleLine: false, exceptAfterOverload: true },
   ]),
 
   /**
@@ -216,8 +216,8 @@ const rules = {
   '@typescript-eslint/member-delimiter-style': [
     'warn',
     {
-      multiline: {delimiter: 'none'},
-      singleline: {delimiter: 'semi'},
+      multiline: { delimiter: 'none' },
+      singleline: { delimiter: 'semi' },
     },
   ],
 
@@ -265,7 +265,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/no-duplicate-imports}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-duplicate-imports.md}
    */
-  ...override('no-duplicate-imports', ['warn', {includeExports: false}]),
+  ...override('no-duplicate-imports', ['warn', { includeExports: false }]),
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dynamic-delete.md}
@@ -309,7 +309,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/no-extra-parens}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md}
    */
-  ...override('no-extra-parens', ['error', 'all', {ignoreJSX: 'all'}]),
+  ...override('no-extra-parens', ['error', 'all', { ignoreJSX: 'all' }]),
 
   /**
    * @override errors:no-extra-semi
@@ -326,7 +326,7 @@ const rules = {
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-floating-promises.md}
    */
-  '@typescript-eslint/no-floating-promises': ['off', {ignoreIIFE: true}],
+  '@typescript-eslint/no-floating-promises': ['off', { ignoreIIFE: true }],
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md}
@@ -338,7 +338,7 @@ const rules = {
    */
   '@typescript-eslint/no-implicit-any-catch': [
     'warn',
-    {allowExplicitAny: false},
+    { allowExplicitAny: false },
   ],
 
   /**
@@ -353,7 +353,7 @@ const rules = {
    */
   '@typescript-eslint/no-inferrable-types': [
     'error',
-    {ignoreParameters: false, ignoreProperties: false},
+    { ignoreParameters: false, ignoreProperties: false },
   ],
 
   /**
@@ -718,7 +718,7 @@ const rules = {
   ...override('quotes', [
     'warn',
     'single',
-    {avoidEscape: true, allowTemplateLiterals: true},
+    { avoidEscape: true, allowTemplateLiterals: true },
   ]),
 
   /**
@@ -726,7 +726,7 @@ const rules = {
    */
   '@typescript-eslint/require-array-sort-compare': [
     'error',
-    {ignoreStringArrays: true},
+    { ignoreStringArrays: true },
   ],
 
   /**
@@ -769,7 +769,7 @@ const rules = {
   ...override('semi', [
     'warn',
     'never',
-    {beforeStatementContinuationChars: 'always'},
+    { beforeStatementContinuationChars: 'always' },
   ]),
 
   /**
@@ -796,7 +796,7 @@ const rules = {
    * @see {@link https://eslint.org/docs/rules/space-infix-ops}
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-infix-ops.md}
    */
-  ...override('space-infix-ops', ['warn', {int32Hint: false}]),
+  ...override('space-infix-ops', ['warn', { int32Hint: false }]),
 
   /**
    * @see {@link https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/strict-boolean-expressions.md}
@@ -847,4 +847,4 @@ const overrides = [
   },
 ]
 
-module.exports = {parser, parserOptions, plugins, globals, rules, overrides}
+module.exports = { parser, parserOptions, plugins, globals, rules, overrides }

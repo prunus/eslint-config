@@ -26,11 +26,11 @@ const rules = {
           '/^~/',
           ['parent', 'sibling', 'index'],
         ],
-        alphabetize: {order: 'asc', ignoreCase: true},
+        alphabetize: { order: 'asc', ignoreCase: true },
       },
     ],
     'sort-imports',
   ),
 }
 
-module.exports = {plugins, parserOptions, rules}
+module.exports = { plugins, parserOptions, rules }

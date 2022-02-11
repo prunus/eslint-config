@@ -15,6 +15,15 @@ const rules = {
   'no-async-promise-executor': ['error'],
 
   /**
+   * Performing an operation on each element of an iterable is a common task.
+   * However, performing an await as part of each operation is an indication
+   * that the program is not taking full advantage of the parallelization
+   * benefits of async/await.
+   *
+   * Usually, the code should be refactored to create all the promises at once,
+   * then get access to the results using Promise.all(). Otherwise,
+   * each successive operation will not start until the previous one has completed.
+   *
    * @see {@link https://eslint.org/docs/rules/no-await-in-loop}
    */
   'no-await-in-loop': ['error'],
@@ -92,7 +101,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-extra-parens}
    */
-  'no-extra-parens': ['error', 'all', {ignoreJSX: 'all'}],
+  'no-extra-parens': ['error', 'all', { ignoreJSX: 'all' }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-extra-semi}
@@ -197,7 +206,7 @@ const rules = {
   /**
    * @see {@link https://eslint.org/docs/rules/no-unsafe-optional-chaining}
    */
-  'no-unsafe-optional-chaining': ['off', {disallowArithmeticOperators: true}],
+  'no-unsafe-optional-chaining': ['off', { disallowArithmeticOperators: true }],
 
   /**
    * @see {@link https://eslint.org/docs/rules/no-useless-backreference}
@@ -220,4 +229,4 @@ const rules = {
   'valid-typeof': ['error'],
 }
 
-module.exports = {rules}
+module.exports = { rules }

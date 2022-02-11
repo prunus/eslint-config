@@ -1,3 +1,3 @@
 module.exports = {
-  extends: require.resolve('./tsx'),
+  extends: ['./tsx'].map(require.resolve),
 }
